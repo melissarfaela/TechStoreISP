@@ -54,23 +54,26 @@ Violação do Princípio da Segregação de Interfaces (ISP), que afirma:
 ### Estrutura:
 
 ````
-TechStoreOCP
+TechStoreISP
 └── src
-    └── java
-        ├── descontos
-        │   ├── EstrategiaDesconto.java
-        │   ├── DescontoAniversario.java
-        │   ├── DescontoCupom.java
-        │   ├── DescontoSazonal.java
-        │   └── DescontoVip.java
-        │
-        ├── model
-        │   └── Pedido.java
-        │
-        └── util
-            ├── CalculadoraDesconto.java
-            └── Main.java
+    └── main
+        └── java
+            ├── domain
+            │   └── Cliente.java
+            │
+            ├── service
+            │   ├── ClienteService.java
+            │   └── ClienteVipService.java
+            │
+            ├── strategy
+            │   ├── ICadastro.java
+            │   ├── IDesconto.java
+            │   └── INotificar.java
+            │
+            └── util
+                └── Main.java
 ````
+
 
 <br>
 
